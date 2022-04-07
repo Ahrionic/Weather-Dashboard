@@ -56,6 +56,14 @@ document.addEventListener('click', () => {
             let currentUVI = resp.data.current.uvi
             let currentDate = res.data.list[0].dt_txt
 
+            citySelected.innerHTML = cityName
+            document.getElementById('location').innerHTML = currentDate
+            document.getElementById('iconContainer').innerHTML = `<img src="http://openweathermap.org/img/wn/${res.data.list[0].weather[0].icon}@2x.png" alt="weather-icon">`
+            tempValue.innerHTML = currentTemp + '°F'
+            windValue.innerHTML = currentWindSpeed + ' mph'
+            humidityValue.innerHTML = currentHumidity
+            uviValue.innerHTML = currentUVI
+
 
             let weatherArry = []
             let day1 = {
@@ -158,6 +166,14 @@ document.getElementById('searchBtn').addEventListener('click', () => {
           let currentHumidity = res.data.list[0].main.humidity
           let currentUVI = resp.data.current.uvi
           let currentDate = res.data.list[0].dt_txt
+
+          citySelected.innerHTML = cityName
+          document.getElementById('location').innerHTML = currentDate
+          document.getElementById('iconContainer').innerHTML = `<img src="http://openweathermap.org/img/wn/${res.data.list[0].weather[0].icon}@2x.png" alt="weather-icon">`
+          tempValue.innerHTML = currentTemp + '°F'
+          windValue.innerHTML = currentWindSpeed + ' mph'
+          humidityValue.innerHTML = currentHumidity
+          uviValue.innerHTML = currentUVI
 
           let weatherArry = []
           let day1 = {
