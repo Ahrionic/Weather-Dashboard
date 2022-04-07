@@ -31,7 +31,7 @@ document.addEventListener('click', () => {
             console.log(resp.data)
 
             let uviColor
-            if (resp.data.current.uvi < 2) {
+            if (resp.data.current.uvi >= 2) {
               document.getElementById('mainContainer').classList.remove('default-bg')
               document.getElementById('iconContainer').classList.remove('default-bg')
               document.getElementById('mainContainer').classList.add('green')
