@@ -56,13 +56,6 @@ document.addEventListener('click', () => {
             let currentUVI = resp.data.current.uvi
             let currentDate = res.data.list[0].dt_txt
 
-            citySelected.innerHTML = cityName
-            document.getElementById('location').innerHTML = currentDate
-            document.getElementById('iconContainer').innerHTML = `<img src="http://openweathermap.org/img/wn/${res.data.list[0].weather[0].icon}@2x.png" alt="weather-icon">`
-            tempValue.innerHTML = currentTemp + '°F'
-            windValue.innerHTML = currentWindSpeed + ' mph'
-            humidityValue.innerHTML = currentHumidity
-            uviValue.innerHTML = currentUVI
 
             let weatherArry = []
             let day1 = {
@@ -102,7 +95,8 @@ document.addEventListener('click', () => {
 
             weatherArry.push(day1, day2, day3, day4, day5)
             console.log(weatherArry)
-
+            
+            container.innerHTML = ''
             weatherArry.forEach(day => {
               document.getElementById('flex-container').innerHTML += `
               <div class="grid-item">
@@ -165,14 +159,6 @@ document.getElementById('searchBtn').addEventListener('click', () => {
           let currentUVI = resp.data.current.uvi
           let currentDate = res.data.list[0].dt_txt
 
-          citySelected.innerHTML = cityName
-          document.getElementById('location').innerHTML = currentDate
-          document.getElementById('iconContainer').innerHTML = `<img src="http://openweathermap.org/img/wn/${res.data.list[0].weather[0].icon}@2x.png" alt="weather-icon">`
-          tempValue.innerHTML = currentTemp + '°F'
-          windValue.innerHTML = currentWindSpeed + ' mph'
-          humidityValue.innerHTML = currentHumidity
-          uviValue.innerHTML = currentUVI
-
           let weatherArry = []
           let day1 = {
             date: res.data.list[8].dt_txt,
@@ -211,7 +197,8 @@ document.getElementById('searchBtn').addEventListener('click', () => {
 
           weatherArry.push(day1, day2, day3, day4, day5)
           console.log(weatherArry)
-
+          
+          container.innerHTML = ''
           weatherArry.forEach(day => {
             document.getElementById('flex-container').innerHTML += `
               <div class="grid-item">
