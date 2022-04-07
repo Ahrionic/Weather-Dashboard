@@ -38,6 +38,6 @@
 
   ***
   ## Additional Info
-  - Deployed App: 
+  - Deployed App: https://ahrionic.github.io/Weather-Dashboard/
   - Github: Ahrionic (https://github.com/Ahrionic)
   - Email: KoreyLuu@gmail.com
