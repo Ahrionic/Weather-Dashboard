@@ -37,7 +37,7 @@ document.addEventListener('click', () => {
               document.getElementById('mainContainer').classList.add('green')
               document.getElementById('iconContainer').classList.add('green')
 
-            } else if (resp.data.current.uvi < 5) {
+            } else if (resp.data.current.uvi >= 5) {
               document.getElementById('mainContainer').classList.remove('default-bg')
               document.getElementById('iconContainer').classList.remove('default-bg')
               document.getElementById('mainContainer').classList.add('yellow')
