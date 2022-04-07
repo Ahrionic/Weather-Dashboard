@@ -5,6 +5,7 @@ const tempValue = document.getElementById('tempValue')
 const windValue = document.getElementById('windValue')
 const humidityValue = document.getElementById('humidityValue')
 const uviValue = document.getElementById('uviValue')
+const container = document.getElementById('flex-container')
 
 
 let UserCities = JSON.parse(localStorage.getItem('storedCities')) || []
@@ -64,7 +65,6 @@ document.addEventListener('click', () => {
             humidityValue.innerHTML = currentHumidity
             uviValue.innerHTML = currentUVI
 
-
             let weatherArry = []
             let day1 = {
               date: res.data.list[8].dt_txt,
@@ -103,7 +103,7 @@ document.addEventListener('click', () => {
 
             weatherArry.push(day1, day2, day3, day4, day5)
             console.log(weatherArry)
-            
+
             container.innerHTML = ''
             weatherArry.forEach(day => {
               document.getElementById('flex-container').innerHTML += `
@@ -213,7 +213,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
 
           weatherArry.push(day1, day2, day3, day4, day5)
           console.log(weatherArry)
-          
+
           container.innerHTML = ''
           weatherArry.forEach(day => {
             document.getElementById('flex-container').innerHTML += `
